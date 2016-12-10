@@ -25,26 +25,3 @@ cacheSolve <- function(x, ...) {
     m
 }
 
-a <- makeCacheMatrix(matrix(1:4, 2, 2))
-a$get()
-cacheSolve(a)
-
-b <- makeCacheMatrix(matrix(4:8, 2, 2))
-b$get()
-cacheSolve(b)
-
-c = matrix(c(1,-0.25,-0.25,1),nrow=2,ncol=2,byrow=T)
-ci = cacheSolve(makeCacheMatrix(a))
-ci
-
-d = matrix(c(4,7,2,6),nrow=2,ncol=2,byrow=T)
-di = cacheSolve(makeCacheMatrix(a))
-di
-
-ai1 = cacheSolve(makeCacheMatrix(a))
-am = makeCacheMatrix(a)
-ai = cacheSolve(am)
-ai2 = cacheSolve(am)
-getting cached data
-ai %*% a
-a %*% ai2
