@@ -24,9 +24,3 @@ cachemean <- function(x, ...) {
     m
 }
 
-a <- makeVector(1:5)
-a$get()
-cachemean(a)
-b <- makeVector( rep(6:10,2) )
-b$get()
-cachemean(b)
